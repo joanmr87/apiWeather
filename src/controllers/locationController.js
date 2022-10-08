@@ -5,14 +5,18 @@ const axios = require('axios');
 const locationController = {
     getLocation: async (req, res) => {
         try {
-            const ip = req.headers['x-forwarded-for'] || req.connection.remoteAddress;
-            console.log("ip", ip);
-            const response = await axios.get(`http://ip-api.com/json/${ip}`);
-            console.log("ESTO ES RESPONSE.data location controller ln9", response.data);
-            res.json(response.data);
+            const location = await axios.get('http://ip-api.com/json');
+            console.log("PASO POR LA 9 De LOCATION CONTROLLER", location.data);
+            res.json({
+                status: location.data.status,
+                data: location.data
+            });
         } catch (error) {
-            console.log(error);
-        }
+            res.status(404).json({
+                status: 'fail',
+                message: error.message,
+            });                               
+        } 
     }
 }
 
