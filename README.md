@@ -19,15 +19,29 @@ Ruta base
 
 
 /location
-Devuelve los datos de ubicación city según ip-api.
+Devuelve los datos de ubicación del usuario según ip-api.
 
 
 /current[/city]
-City es un parámetro opcional. Devuelve los datos de ubicación city o la ubicación
-actual según ip-api y el estado del tiempo actual.
+City es un parámetro opcional. Si se envia el nombre de una ciudad por parametro, devuelve estado del clima actual de dicha ciudad. En caso de no existir dicha ciudad, retornara un error con el mensaje correspondiente. En el caso de no enviar parametros, se retorna el estado del clima actual en la ubicacion del usuario, obtenida a a traves de la funcion 'location'.
 
 
 /forecast[/city]
-City es un parámetro opcional. Devuelve los datos de ubicación city o la ubicación
-actual según
-ip-api y el estado del tiempo a 5 días.
+City es un parámetro opcional. Si se envia el nombre de una ciudad por parametro, devuelve estado del clima a 5 dias de dicha ciudad. En caso de no existir dicha ciudad, retornara un error con el mensaje correspondiente. En el caso de no enviar parametros, se retorna el estado del clima a 5 dias en la ubicacion del usuario, obtenida a a traves de la funcion 'location'.
+
+
+-----------------------------------------------------------------------------
+
+Para correr el proyecto:
+
+1. Clonar el repositorio.
+2. Crear archivo .env en la raiz del proyecto con las siguientes variables:
+    - PORT=3000
+    - API_KEY= AGREGAR API KEY
+3. Instalar dependencias con npm install.
+4. Levantar el servidor con npm start.
+
+Para correr los tests:
+
+- npm test
+
