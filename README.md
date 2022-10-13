@@ -37,7 +37,7 @@ Para correr el proyecto:
 1. Clonar el repositorio.
 2. Crear archivo .env en la raiz del proyecto con las siguientes variables:
     - PORT=3000
-    - API_KEY= AGREGAR API KEY
+    - OPEN_WEATHER_API_KEY= AGREGAR API KEY
 3. Instalar dependencias con npm install.
 4. Levantar el servidor con npm start.
 
