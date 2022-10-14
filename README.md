@@ -1,8 +1,8 @@
 Información sobre el Proyecto
 
-Trello: https://trello.com/ AGREGAR TRELLO
+Trello: https://trello.com/b/pZo8TUIM/flow
 
-Postman collection:  AGREGAR COLLECTION
+Postman collection:  https://www.getpostman.com/collections/fb1e28ec09c44e4811f4
 
 Desarrollado sobre Node.js usando JavaScript.
 Se implementa una API que provee en formato JSON el estado del tiempo basado en
