@@ -1,6 +1,6 @@
 const express = require('express');
 const router = express.Router();
-const location = require('../utils/location');
+const location = require('../controllers/locationController');
 
 
 
