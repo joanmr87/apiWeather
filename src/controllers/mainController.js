@@ -1,6 +1,8 @@
+const path = require("path");
+
 const controller = {
 	main: (req, res) => {
-		res.send("ESTAMOS EN LA RUTA PRICNIPAL")
+		res.sendFile(path.join(__dirname, '../views/index.html'));
 	},
 };
 

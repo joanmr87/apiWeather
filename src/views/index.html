@@ -1,0 +1,34 @@
+
+<html>
+  <head>
+    <title>README.md</title>
+  </head>
+  <body>
+    <h1>Información sobre el Proyecto</h1>
+    <p> Trello: https://trello.com/ AGREGAR TRELLO </p>
+    <p> Postman collection:  AGREGAR COLLECTION</p>
+    <p> Desarrollado sobre Node.js usando JavaScript.
+        Se implementa una API que provee en formato JSON el estado del tiempo basado en
+        diferentes endpoints.
+        Se utiliza servicio API de weather Open Weather Map.
+        Se realizan tests con la Jest.
+        Se intenta obtener  IP de usuario con las librerias IP (<a>https://www.npmjs.com/package/ip</a>) y request-ip (<a>https://www.npmjs.com/package/request-ip</a>), pero en ambos casos se obtiene una IP privada ( 192.168.XXX.X ), con la cual no es posible obtener la latitud y longitud con ip-api.
+        </p>
+    <h2>ENDPOINTS: </h2>
+    <p> Ruta base: /v1 </p>
+    <p> /location: Devuelve los datos de ubicación del usuario según ip-api.</p>
+    <p> /current[/city] : City es un parámetro opcional. Si se envia el nombre de una ciudad por parametro, devuelve estado del clima actual de dicha ciudad. En caso de no existir dicha ciudad, retornara un error con el mensaje correspondiente. En el caso de no enviar parametros, se retorna el estado del clima actual en la ubicacion del usuario, obtenida a a traves de la funcion 'location'.</p>
+    <p> /forecast[/city] : City es un parámetro opcional. Si se envia el nombre de una ciudad por parametro, devuelve estado del clima a 5 dias de dicha ciudad. En caso de no existir dicha ciudad, retornara un error con el mensaje correspondiente. En el caso de no enviar parametros, se retorna el estado del clima a 5 dias en la ubicacion del usuario, obtenida a a traves de la funcion 'location'.</p>
+    <h2>Para correr el proyecto:</h2>
+    <ul>
+        <li>1. Clonar el repositorio</li>
+        <li>2. Crear archivo .env en la raiz del proyecto con las siguientes variables:
+            - PORT=3000
+            - OPEN_WEATHER_API_KEY= AGREGAR API KEY</li>
+        <li>3. Instalar dependencias con npm install.</li>
+        <li>4. Correr el proyecto con npm start.</li>
+    </ul>
+    <h2> Para correr los tests:</h2>
+    <p>npm test</p>
+  </body>
+</html>

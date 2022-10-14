@@ -1,6 +1,7 @@
 const express = require("express");
-
 const app = express();
+const path = require("path");
+
 
 const mainRouter = require("./routes/main");
 const location = require("./routes/location");
@@ -10,7 +11,7 @@ const forecast = require("./routes/forecast");
 
 app.use(express.json());
 
-
+app.set('views', path.join(__dirname, '/views'));
 
 app.use('/v1', mainRouter)
 app.use('/location', location);
